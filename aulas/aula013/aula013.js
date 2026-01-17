@@ -9,3 +9,4 @@ if(nota>=7) {
 }
 
 console.log ("fim do programa");
+
