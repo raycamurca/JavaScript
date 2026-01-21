@@ -1,4 +1,4 @@
-let pessoas = [{nome:"rayzin", idade: 19}, {nome:"jhennifer", idade:18}]
+let pessoas = [{nome:"Reginaldo", idade: 19}, {nome:"Francisquin", idade:18}]
 let nome = pessoas.map(n=>n.nome)
 let idade = pessoas.map(i=>i.idade)
 
