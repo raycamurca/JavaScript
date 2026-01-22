@@ -7,8 +7,8 @@ const dc6=document.getElementById("c6")
 
 const arrayElementos=[dc1,dc2,dc3,dc4,dc5,dc6]
 
-let colecaoHTML= document.getElementsByTagName("div")
-colecaoHTML=[...colecaoHTML]
+const colecaoHTML=[...document.getElementsByTagName("div")]
+// colecaoHTML=[...colecaoHTML] //use let se for usar essa linha
 
 console.log(colecaoHTML)
 
