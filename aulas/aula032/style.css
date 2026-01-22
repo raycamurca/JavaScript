@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+.curso {
+    border-radius: 10px;
+    width: 20vw;
+    text-align: center;
+    padding: 5px;
+}
+
+.curso:hover {
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+.c1 {
+    background-color: lightblue;
+}
+
+.c2 {
+    background-color: lightcoral;
+}
+
+.destaque {
+    background-color: black;
+}
