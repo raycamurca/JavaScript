@@ -35,7 +35,4 @@ const novoArray = clientes.map((cliente, pos)=>{
         gastoMedioMensal: cliente.gastoMedioMensal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
     }
 })
-
 console.log(novoArray);
-
-
