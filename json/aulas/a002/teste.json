@@ -1,0 +1,16 @@
+[
+    {
+        "nome": "Jezz",
+        "idade": 33,
+        "trabalhando": true,
+        "detalhes_profissao": {
+            "profissao": "Programador",
+            "empresa": "monte dos ventos"
+        },
+        "hobbies": [
+            "fut",
+            "ver anime",
+            "programar"
+        ]
+    }
+]
