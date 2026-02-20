@@ -1,0 +1,7 @@
+{
+    "empresa": "Galinha d` água",
+    "funcionarios": [
+    {"nome": "Muku", "cargo": "diretor"},
+    {"nome": "Zita", "cargo": "repositor"}
+    ]
+}

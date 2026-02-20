@@ -1,0 +1,7 @@
+{
+    "cliente": "Karas",
+    "produtos": [
+        {"nome": "TV", "preco": 15000},
+        {"nome": "notebook", "preco": 45000}
+    ]
+}

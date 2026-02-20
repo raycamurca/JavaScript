@@ -1,0 +1,31 @@
+    {
+        "cliente": "raf",
+        "endereco": {
+            "rua": "rua da massa",
+            "numero": 777,
+            "cidade": "alpha x"
+        },
+        "pedidos": [
+            {
+                "id": 1,
+                "produtos": [
+                    {"nome": "arroz", "preco": 5},
+                    {"nome": "banana", "preco": 30}
+                ]
+            },
+            {
+                "id": 2,
+                "produtos": [
+                    {"nome": "frango", "preco": 50},
+                    {"nome": "carne", "preco": 100}
+                ]
+            },
+            {
+                "id": 3,
+                "produtos": [
+                    {"nome": "peixe", "preco": 70},
+                    {"nome": "limao", "preco": 10}
+                ]
+            }     
+        ]   
+    }
