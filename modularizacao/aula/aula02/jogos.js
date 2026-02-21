@@ -1,6 +1,6 @@
 export const jogos = ["God of War", "Dragon ball", "GTA VI"];
 
-export const todosJogos = ()=>{
+export const jogoEscolhido = ()=>{
     return jogos[2]
 }
 
