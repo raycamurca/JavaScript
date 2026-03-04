@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+section {
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    height: 140px;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px black;
+    color: white;
+}
+
+button.bt-transferir {
+    background-color: lightcoral;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.selecionado {
+    background-color: purple;
+    color: white;
+    border-color: white;
+}
