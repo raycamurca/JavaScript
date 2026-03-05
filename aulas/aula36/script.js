@@ -4,7 +4,6 @@ const todosCursos = [...document.querySelectorAll(".curso")]
 
 disponiveis.addEventListener("click", evt => {
   console.log("clicou");
-  console.log(evt);
 });
 
 todosCursos.map((el)=>{

@@ -14,10 +14,9 @@ const buttonFilho = document.querySelector("#filho");
 // com Stop propagation
 
 pai.addEventListener("click", (e) => {
-  console.log("Pai");
+  e.stopPropagation()
 });
 
 filho.addEventListener("click", (e) => {
-  e.stopPropagation();
   console.log("Filho");
 });
