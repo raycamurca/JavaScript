@@ -1,14 +1,7 @@
-const btAdd = document.querySelector(".add-curso");
-
-const btRemover = document.querySelector(".remover-curso");
-
-const btSelecionado = document.querySelector(".select-curso");
-
 const sectionCursos = document.querySelector(".cursos");
 
+// ADD CLASSE SELECIONADO EM CURSOS
 const todosCursos = [...document.querySelectorAll(".curso")];
-
-// ADD CLASSE SELECIONADO
 
 todosCursos.map(el => {
   el.addEventListener("click", () => {
@@ -17,6 +10,7 @@ todosCursos.map(el => {
 });
 
 // CURSOS SELECIONADOS
+const btSelecionado = document.querySelector(".select-curso");
 
 btSelecionado.addEventListener("click", () => {
   const cursosSelecionados = [...document.querySelectorAll(".selecionado")];
@@ -34,6 +28,7 @@ btSelecionado.addEventListener("click", () => {
 });
 
 // REMOVER CURSOS SELECIONADOS
+const btRemover = document.querySelector(".remover-curso");
 
 btRemover.addEventListener("click", () => {
   const cursosSelecionados = [...document.querySelectorAll(".selecionado")];
@@ -43,6 +38,7 @@ btRemover.addEventListener("click", () => {
 });
 
 // ADD CURSO
+const btAdd = document.querySelector(".add-curso");
 
 btAdd.addEventListener("click", () => {
   const textoCurso = document.querySelector("#inome");
