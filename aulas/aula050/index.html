@@ -7,35 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="resultado">
-        
-    </div>
     <div class="conteiner">
-        <div class="item">
-            <button class="number" value="7">7</button>
-            <button class="number" value="8">8</button>
-            <button class="number" value="9">9</button>
-            <button class="bt-operacao" value="*">x</button>
+        <div>
+            <input type="number" name="number1" id="onesoma">
         </div>
-        <div class="item">
-            <button class="number" value="4">4</button>
-            <button class="number" value="5">5</button>
-            <button class="number" value="6">6</button>
-            <button class="bt-operacao" value="-">-</button>
+        +
+        <div>
+            <input type="number" name="number2" id="twosoma">
         </div>
-        <div class="item">
-            <button class="number" value="1">1</button>
-            <button class="number" value="2">2</button>
-            <button class="number" value="3">3</button>
-            <button class="bt-operacao" value="+">+</button>
-        </div>
-        <div class="item">
-            <button class="bt-igual" value="=">=</button>
-            <button class="number" value="0">0</button>
-            <button class="bt-apagar">⌫</button>
-            <button class="bt-operacao" value="/">÷</button>
-        </div>
+        <button class="bt-somar">=</button>
     </div>
+
+    <div class="resp-soma"></div>
+
+    <div class="conteiner">
+        <div>
+            <input type="number" name="number1" id="onemenos">
+        </div>
+        --
+        <div>
+            <input type="number" name="number2" id="twomenos">
+        </div>
+        <button class="bt-menos">=</button>
+    </div>
+
+    <div class="resp-menos"></div>
     <script src="script.js"></script>
 </body>
 </html>

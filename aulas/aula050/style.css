@@ -26,18 +26,27 @@ body {
     border-top: 2px solid rgba(0, 0, 0, 0.463);
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    border: 2px solid white;
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
 }
 
 button {
-    border-radius: 30%;
-    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px;
     text-align: center;
     font-size: 20px;
-    width: 85px;
     background-color: rgba(39, 36, 36, 0.603);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.79);
