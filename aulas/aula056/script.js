@@ -1,34 +1,38 @@
 class Pessoa {
-    constructor(pnome, pidade){
-        this.nome = pnome,
-        this.idade = pidade
-    }
+  constructor(pnome, pidade) {
+    this.nome = pnome,
+    this.idade = pidade;
+  }
 
-    getInfo(){
-        return `Nome: ${this.nome} | Idade: ${this.idade}`
-    }
+  getInfo() {
+    return `Nome: ${this.nome} | Idade: ${this.idade}`;
+  }
 }
 
 let pessoas = [];
 
+const add = () => {
+  let resp = document.querySelector(".resultado");
+  resp.innerHTML = "";
+  pessoas.forEach(el => {
+    const div = document.createElement("div");
+    div.setAttribute("class", "pessoa");
+    div.innerHTML = el.getInfo();
+    resp.appendChild(div);
+  });
+};
+
 const btAdd = document.querySelector(".bt-add");
 
-btAdd.addEventListener("click", (el)=>{
-    el.preventDefault()
-    const inputNome = document.querySelector("#inome");
-    const inputIdade = document.querySelector("#iidade");
-    const pessoa = new Pessoa(inputNome.value, Number(inputIdade.value))
-    pessoas.push(pessoa);
-    let resp = document.querySelector(".resultado")
-    resp.innerHTML = "";
-
-    pessoas.forEach((el)=>{
-        const div = document.createElement("div");
-        div.setAttribute("class", "pessoa");
-        div.innerHTML = el.getInfo();
-        resp.appendChild(div);
-    })
-    inputNome.value = "";
-    inputIdade.value = "";
-    inputNome.focus();
-})
+btAdd.addEventListener("click", el => {
+  el.preventDefault();
+  const inputNome = document.querySelector("#inome");
+  const inputIdade = document.querySelector("#iidade");
+  if (inputNome.value == "" || inputIdade.value == "") return;
+  const pessoa = new Pessoa(inputNome.value, Number(inputIdade.value));
+  pessoas.push(pessoa);
+  add();
+  inputNome.value = "";
+  inputIdade.value = "";
+  inputNome.focus();
+});
