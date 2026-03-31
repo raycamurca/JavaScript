@@ -40,3 +40,17 @@ body {
 #tigual {
     background-color: gray;
 }
+
+#display {
+    padding: 10px;
+}
+
+.botoes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.limpar {
+    color: red;
+}
