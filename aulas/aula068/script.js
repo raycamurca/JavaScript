@@ -45,6 +45,19 @@ limpar.addEventListener("click", () => {
   display.innerHTML = "0";
 });
 
+// Botao apagar
+
+const btApagar = document.querySelector(".apagar");
+
+btApagar.addEventListener("click", ()=>{
+  let texto = display.innerHTML;
+  display.innerHTML = texto.slice(0, -1);
+
+  if(display.innerHTML == ""){
+    display.innerHTML = "0";
+  }
+})
+
 // Teclas operacoes
 
 const teclaOp = document.querySelectorAll(".ope");
