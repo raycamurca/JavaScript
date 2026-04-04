@@ -1,20 +1,28 @@
-// Teclas numericas (0-9 | ,)
+// numeros
 
-const teclaNum = document.querySelectorAll(".num");
+const teclasNum = document.querySelectorAll(".num");
 const display = document.querySelector("#display");
-let decimal = false;
 
+let decimal = false;
 let op = ["+", "-", "*", "/"];
 
-teclaNum.forEach(tecla => {
-  tecla.addEventListener("click", evt => {
-    // virgula
+teclasNum.forEach(numero => {
+  numero.addEventListener("click", evt => {
+    const valor = evt.target.innerHTML;
 
-    let valor = evt.target.innerHTML;
-    let ultimo = display.innerHTML.slice(-1);
+    if (valor != ",") {
+      if (display.innerHTML == "0") {
+        display.innerHTML = valor;
+      } else {
+        display.innerHTML += valor;
+      }
+      return;
+    }
 
     if (valor == ",") {
-      if (decimal || op.includes(ultimo)) return;
+      let ultimo = display.innerHTML.slice(-1);
+      if (decimal) return;
+      if (op.includes(ultimo) || ultimo == ",") return;
       decimal = true;
 
       if (display.innerHTML == "0") {
@@ -22,55 +30,21 @@ teclaNum.forEach(tecla => {
       } else {
         display.innerHTML += valor;
       }
-
       return;
-    }
-
-    // Número
-
-    if (display.innerHTML == "0") {
-      display.innerHTML = valor;
-    } else {
-      display.innerHTML += valor;
     }
   });
 });
 
-// Botão Limpar
-
-const limpar = document.querySelector(".limpar");
-
-limpar.addEventListener("click", () => {
-  decimal = false;
-  display.innerHTML = "0";
-});
-
-// Botao apagar
-
-const btApagar = document.querySelector(".apagar");
-
-btApagar.addEventListener("click", ()=>{
-  let texto = display.innerHTML;
-  display.innerHTML = texto.slice(0, -1);
-
-  if(display.innerHTML == ""){
-    display.innerHTML = "0";
-  }
-})
-
-// Teclas operacoes
+// operadores
 
 const teclaOp = document.querySelectorAll(".ope");
 
-teclaOp.forEach(tecla => {
-  tecla.addEventListener("click", evt => {
-    let valor = evt.target.innerHTML;
+teclaOp.forEach(operador => {
+  operador.addEventListener("click", evt => {
+    const valor = evt.target.innerHTML;
     let ultimo = display.innerHTML.slice(-1);
+    if (op.includes(ultimo) || ultimo == ",") return;
     decimal = false;
-
-    if (display.innerHTML == "0" || ultimo == "," || op.includes(ultimo))
-      return;
-
     if (valor == "x") {
       display.innerHTML += "*";
     } else {
@@ -79,11 +53,37 @@ teclaOp.forEach(tecla => {
   });
 });
 
-// Resultado
+// botao clear
+
+const btLimpar = document.querySelector(".limpar");
+
+btLimpar.addEventListener("click", () => {
+  decimal = false;
+  display.innerHTML = "0";
+});
+
+// botao apagar
+
+const btApagar = document.querySelector(".apagar");
+
+btApagar.addEventListener("click", () => {
+  let texto = display.innerHTML;
+  let ultimo = display.innerHTML.slice(-1);
+  if (display.innerHTML == "0") return;
+  if (ultimo == ",") {
+    decimal = false;
+  }
+  display.innerHTML = texto.slice(0, -1);
+  if (display.innerHTML == "") {
+    display.innerHTML = "0";
+  }
+});
+
+// resultado
 
 const btIgual = document.querySelector(".igual");
 
-btIgual.addEventListener("click", evt => {
+btIgual.addEventListener("click", () => {
   decimal = false;
   let conta = display.innerHTML.replaceAll(",", ".");
   const resp = eval(conta);
