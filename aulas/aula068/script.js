@@ -79,6 +79,15 @@ btApagar.addEventListener("click", () => {
   }
 });
 
+// Copiar
+
+const btCopy = document.querySelector(".copy");
+
+btCopy.addEventListener("click", ()=>{
+  navigator.clipboard.writeText(display.innerHTML);
+  alert(`Copiado: ${display.innerHTML}`);
+})
+
 // resultado
 
 const btIgual = document.querySelector(".igual");
