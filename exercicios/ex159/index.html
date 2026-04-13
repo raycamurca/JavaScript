@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/style/style.css">
+</head>
+<body>
+    <main id="form-conteiner">
+        <div id="form-header">
+            <h1>Criar conta</h1>
+            <button class="btn-default">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
+        </div>
+
+        <form action="" id="form">
+            <div id="input-conteiner">
+                <div class="input-box">
+                    <label for="inome" id="nome">Nome</label>
+
+                    <div class="input-field">
+                        <input class="form-control" type="text" id="inome" placeholder="seu nome">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                
+
+                <div class="input-box">
+                    <label for="isobrenome" id="sobrenome">Sobrenome</label>
+
+                    <div class="input-field">
+                        <input class="form-control" type="text" id="isobrenome" placeholder="seu sobrenome">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                
+
+                <div class="input-box">
+                    <label for="inasc" id="nascimento">Nascimento</label>
+
+                    <div class="input-field">
+                        <input class="form-control" type="date" id="inasc">
+                    </div>
+                </div>
+                
+
+                <div class="input-box">
+                    <label for="iemail" id="email">Email</label>
+
+                    <div class="input-field">
+                        <input class="form-control" type="text" id="iemail" placeholder="email@exemplo.com">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="isenha" id="senha">Senha</label>
+
+                    <div class="input-field">
+                        <input class="form-control" type="password" id="isenha" placeholder="********">
+                        <i class="fa-solid fa-eye-slash password-icon ativo"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="confirm-isenha" id="confirm-senha">Confirmar senha</label>
+
+                    <div class="input-field">
+                        <input class="form-control" type="password" id="confirm-isenha" placeholder="********">
+                        <i class="fa-solid fa-eye-slash password-icon"></i>
+                    </div>
+                </div>
+
+                <div class="radio-conteiner">
+                    <label class="label-genero">
+                        Gênero
+                    </label>
+                    
+                    <div class="gender-inputs">
+                        <div class="radio-box">
+                            <input class="form-control" type="radio" name="genero" id="feminino" value="feminino">Feminino
+                        </div>
+
+                        <div class="radio-box">
+                            <input class="form-control" type="radio" name="genero" id="masculino" value="masculino">Masculino
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn-default">
+                <i class="fa-solid fa-check"></i>
+                Criar conta
+            </button>
+        </form>
+    </main>
+
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>
