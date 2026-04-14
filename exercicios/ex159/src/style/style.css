@@ -165,3 +165,30 @@ input:-webkit-autofill {
         gap: 5px;
     }
 }
+
+.erro {
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 4px;
+    max-height: 200px;
+}
+
+/* invalido */
+
+.input-box.invalido .form-label {
+    color: #dc2626;
+}
+
+.input-box.invalido .input-field {
+    border: 1px solid #dc2626;
+}
+
+/* valido */
+
+.input-box.valido .form-label {
+    color: #22c55e;
+}
+
+.input-box.valido .input-field {
+    border: 1px solid #22c55e;
+}
