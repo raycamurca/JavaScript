@@ -10,6 +10,8 @@
     --sombra: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
     --azul: #6366f1;
     --branco: #ffffff;
+    --vermelho: #dc2626;
+    --verde: #22c55e;
 }
 
 body {
@@ -26,7 +28,7 @@ body {
     background-color: var(--branco);
     padding: 20px;
     border-radius: 10px;
-    min-width: 500px;
+    min-width: 650px;
 }
 
 form h1 {
@@ -84,10 +86,61 @@ button i {
     color: var(--branco);
 }
 
-@media screen and (max-width: 500px){
+.erro {
+    color: var(--vermelho);
+    font-size: 14px;
+    max-width: 300px;
+}
+
+.valido {
+    color: var(--verde);
+}
+
+.div-input.valido label {
+    color: var(--verde);
+}
+
+.div-input.valido .area-input i {
+    color: var(--verde);
+}
+
+.div-input.valido .area-input input {
+    border: 1px solid var(--verde) ;
+}
+
+.genero {
+    font-size: 14px;
+    color: var(--vermelho);
+    margin-top: -10px;
+}
+
+.invalido {
+    color: var(--vermelho);
+}
+
+.div-input.invalido label {
+    color: var(--vermelho);
+}
+
+.div-input.invalido .area-input i {
+    color: var(--vermelho);
+}
+
+.div-input.invalido .area-input input {
+    border: 1px solid var(--vermelho) ;
+}
+
+@media screen and (max-width: 700px){
+
+    body {
+        height: 100%;
+        background-color: var(--branco);
+        box-shadow: none;
+    }
+
     .main-conteiner {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         border-radius: 0px;
     }
 
